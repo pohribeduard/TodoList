@@ -8,6 +8,8 @@
  -----
 ### Descrierea detaliata a proiectului
 
+Pentru a avea acces la functionalitatile aplicatiei, userii vor fi nevoiti sa isi creeze un cont. Odata ce sunt logati acestia vor fi dusi pe o pagina de Dashboard. La prima utilizare Dashboard-ul va avea o singura lista de task-uri Demo ce va avea rol demonstrativ. Aceasta poate fi stearsa ulterior. Utilizatorii isi vor putea creea propriile lor liste de task-uri: Ii vor da un nume, vor adauga iteme de rezolvat in acea lista, optional pot seta un reminder pentru fiecare task. De asemenea pot opta ca lista sa fie "Personala" sau "Shared". Daca vor opta pentru "Personal", atunci lista va fi disponibila doar pentru utilizatorul respectiv. Daca vor alege ca lista sa fie "Shared", atunci pot opta ca aceasta sa fie Publica sau Privata(cu o parola). Pot distribui lista prin intermediul unui ID pe care alti utilizatori il pot folosi ca sa poata accesa lista respectiva. Task-urile pot fi editate si completate de catre toti membrii echipei.
+
  - De ce acest proiect?
  
 Acest proiect va usura viata clientilor oferindu-le o aplicatie sigura in care isi pot stoca task-urile pe care le au de realizate.
@@ -29,6 +31,10 @@ Timpul scurt de pentru realizarea proiectului si faptul ca nu avem cunostinte av
 
  -----
 ### Diagrame de cazuri de utilizare
-###### Un home user acceseaza aplicatia -> se logheaza in aplicatie -> isi creeaza un shopping list -> adauga produsele pe care le are de cumparat -> foloseste lista -> o sterge
-###### Un angajat al unei firme IT -> se logheaza in aplicatie -> isi creeaza o lista pentru a-si nota task-urile pe care le are de rezolvat -> isi seteaza un reminder pentru acestea cu o saptamana inainte -> aplicatia ii va aminti de fiecare dintre acestea cu o saptamana inainte pentru a avea timp sa rezolve task-urile pana la deadline
-###### Un angajator al unei firme -> se logheaza in aplicatie -> creeaza liste private pentru fiecare departament -> le distribuie managerilor de departament -> acestia adauga task-uri in tabele si distribuie tabelele angajatilor -> angajatii se logheaza in aplicatie -> pot vedea task-urile pe care le au de rezolvat
+![Diagrama 1](https://user-images.githubusercontent.com/38556436/78330517-cf2e2300-758c-11ea-93a2-d7e0f94f31e4.png)
+
+![Diagrama 2](https://user-images.githubusercontent.com/38556436/78330568-ed941e80-758c-11ea-8dbe-0358c4e2372d.png)
+
+![Diagrama 3](https://user-images.githubusercontent.com/38556436/78330592-fa187700-758c-11ea-956b-4f829e16aa16.png)
+
+
