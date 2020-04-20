@@ -83,7 +83,13 @@ public class ToDoList {
         this.postedOn = postedOn;
     }
 
-    //SET GET user
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User u) {
+        this.user = user;
+    }
 
     public String getSlug() {
         return slug;
