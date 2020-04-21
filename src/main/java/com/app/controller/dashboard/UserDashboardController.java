@@ -3,7 +3,6 @@ package com.app.controller.dashboard;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,7 +16,6 @@ import com.app.service.UserService;
 import com.app.service.ToDoService;
 
 @Controller
-@Secured( {"LOGGED_USER"} )
 public class UserDashboardController {
 
     private ToDoService toDoService;
