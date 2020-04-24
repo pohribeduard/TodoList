@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layouts/main">
+<head>
+    <title>View Posts</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <h2>View Post</h2>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Title: </label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.title}">title</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Slug</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.slug}">slug</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Posted On</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${#calendars.format(ToDoList.postedOn, 'M/dd/yyyy hh:mm:ss a')}">postedOn</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Keywords</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.keywords}">keywords</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Active</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.active}">active</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Author</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.user.lastName + ', ' + ToDoList.user.firstName}">user</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Body</label>
+            <div class="col-md-10">
+                <p class="form-control-static" th:text="${ToDoList.todos}">body</p>
+            </div>
+        </div>
+    </form>
+
+    <a th:href="@{/admin/posts/}">Back To Posts List</a>
+    <br/><br/><br/>
+
+</div>
+
+</body>
+</html>
