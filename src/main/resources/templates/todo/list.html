@@ -33,14 +33,14 @@
             <td th:text="${#calendars.format(todo.postedOn,'M/dd/yyyy hh:mm:ss a')}">posted on</td>
             <td th:text="${todo.slug}">slug</td>
             <td th:text="${todo.user.firstName + ' ' + todo.user.lastName}">author</td>
-            <td><a href="#" th:href="@{/admin/post/} + ${todo.id}">View</a></td>
-            <td><a href="#" th:href="@{/admin/post/edit/} + ${todo.id}">Edit</a></td>
-            <td><a href="#" th:href="@{/admin/post/delete/} + ${todo.id}">Delete</a></td>
+            <td><a href="#" th:href="@{/user/todo/} + ${todo.id}">View</a></td>
+            <td><a href="#" th:href="@{/user/todo/edit/} + ${todo.id}">Edit</a></td>
+            <td><a href="#" th:href="@{/user/todo/delete/} + ${todo.id}">Delete</a></td>
         </tr>
         </tbody>
     </table>
 
-    <a th:href="@{/admin/post/create}">Add New Post</a>
+    <a th:href="@{/user/todo/create}">Add New Post</a>
     <br/><br/>
 
     <p th:if="${todos.size() == 0}">
