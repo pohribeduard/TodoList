@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.app.domain.ToDoList;
 import com.app.service.UserService;
 import com.app.service.ToDoService;
+import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 @Secured( {"ROLE_LOGGED_USER"} )
@@ -52,16 +53,18 @@ public class UserDashboardController {
 
     @RequestMapping( value = "user/todo/save", method = RequestMethod.POST )
     public String save(@Valid ToDoList post, BindingResult bindingResult, Model model) {
+        model.addAttribute("todo", new ToDoList());
+        model.addAttribute("users", userService.list());
 
         if( bindingResult.hasErrors() ){
             model.addAttribute("users", userService.list());
             return "/todo/toDoForm";
         } else {
             ToDoList savedPost = toDoService.save(post);
-            return "redirect:/todo/" + savedPost.getId();
+            return "redirect:/dashboard" ;
+        }
         }
 
-    }
 
     @RequestMapping("/user/todo/edit/{id}")
     public String edit(@PathVariable Long id, Model model){
