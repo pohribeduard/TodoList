@@ -30,7 +30,7 @@ public class DataLoader {
         userRepository.deleteAll();
 
         // create an author
-        User dv = new User("Admin","Admin","admin@gmail.com");
+        User dv = new User("admin","admin","admin@gmail.com");
         userRepository.save(dv);
         User dv1 = new User("Admin1","Admin1","admin1@gmail.com");
         userRepository.save(dv1);

@@ -88,7 +88,7 @@ public class ToDoList {
     }
 
     public void setUser(User u) {
-        this.user = user;
+        this.user = u;
     }
 
     public String getSlug() {
